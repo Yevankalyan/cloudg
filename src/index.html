@@ -3,54 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sticky Header Example</title>
+    <title>Historical Places</title>
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
         }
 
         header {
             background-color: #333;
-            padding: 10px;
             color: white;
             text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
+            padding: 15px;
         }
 
-        section {
-            height: 800px; /* Just for demonstration, adjust as needed */
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        main {
             padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .place {
+            margin-bottom: 20px;
+        }
+
+        .place img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Sticky Header</h1>
+        <h1>Historical Places</h1>
     </header>
 
-    <section>
-        <h2>Scroll down to see the effect</h2>
-        <!-- Your page content goes here -->
-    </section>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Ancient Civilizations</a>
+        <a href="#">Medieval Sites</a>
+        <a href="#">Modern History</a>
+        <a href="#">Contact</a>
+    </nav>
 
-    <script>
-        window.onscroll = function() {
-            makeHeaderSticky();
-        };
+    <main>
+        <div class="place">
+            <h2>The Great Wall of China</h2>
+            <img src="great_wall_of_china.jpg" alt="Great Wall of China">
+            <p>The Great Wall of China is one of the most iconic historical sites in the world, spanning over 13,000 miles across northern China.</p>
+        </div>
 
-        function makeHeaderSticky() {
-            var header = document.querySelector('header');
+        <div class="place">
+            <h2>The Colosseum</h2>
+            <img src="colosseum.jpg" alt="Colosseum">
+            <p>The Colosseum, located in Rome, Italy, is a grand amphitheater that was used for gladiatorial contests and public spectacles.</p>
+        </div>
 
-            if (window.pageYOffset > 0) {
-                header.classList.add('sticky');
-            } else {
-                header.classList.remove('sticky');
-            }
-        }
-    </script>
+        <!-- Add more historical places as needed -->
+
+    </main>
+
+    <footer>
+        &copy; 2023 Historical Places. All rights reserved.
+    </footer>
+
 </body>
 </html>
